@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B32AACA21ED9F60800BA88E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACA11ED9F60800BA88E1 /* AppDelegate.swift */; };
-		B32AACA41ED9F60800BA88E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACA31ED9F60800BA88E1 /* ViewController.swift */; };
+		B32AACA41ED9F60800BA88E1 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACA31ED9F60800BA88E1 /* GeneralViewController.swift */; };
 		B32AACA71ED9F60800BA88E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32AACA51ED9F60800BA88E1 /* Main.storyboard */; };
 		B32AACAC1ED9F60800BA88E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32AACAB1ED9F60800BA88E1 /* Assets.xcassets */; };
 		B32AACAF1ED9F60800BA88E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32AACAD1ED9F60800BA88E1 /* LaunchScreen.storyboard */; };
 		B32AACBA1ED9F60800BA88E1 /* GitHubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACB91ED9F60800BA88E1 /* GitHubSearchTests.swift */; };
+		B32AACC91ED9F99300BA88E1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */; };
+		B32AACCC1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */; };
+		B32AACCF1EDA03F300BA88E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		B32AAC9E1ED9F60800BA88E1 /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32AACA11ED9F60800BA88E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B32AACA31ED9F60800BA88E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B32AACA31ED9F60800BA88E1 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		B32AACA61ED9F60800BA88E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B32AACAB1ED9F60800BA88E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32AACAE1ED9F60800BA88E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		B32AACB51ED9F60800BA88E1 /* GitHubSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32AACB91ED9F60800BA88E1 /* GitHubSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchTests.swift; sourceTree = "<group>"; };
 		B32AACBB1ED9F60800BA88E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchViewController+TVDataSource+TVDelegate.swift"; sourceTree = "<group>"; };
+		B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				B32AACA11ED9F60800BA88E1 /* AppDelegate.swift */,
-				B32AACA31ED9F60800BA88E1 /* ViewController.swift */,
-				B32AACA51ED9F60800BA88E1 /* Main.storyboard */,
+				B32AACC41ED9F84400BA88E1 /* Controllers */,
+				B32AACC51ED9F85900BA88E1 /* Storyboards */,
 				B32AACAB1ED9F60800BA88E1 /* Assets.xcassets */,
-				B32AACAD1ED9F60800BA88E1 /* LaunchScreen.storyboard */,
 				B32AACB01ED9F60800BA88E1 /* Info.plist */,
 			);
 			path = GitHubSearch;
@@ -94,6 +99,58 @@
 				B32AACBB1ED9F60800BA88E1 /* Info.plist */,
 			);
 			path = GitHubSearchTests;
+			sourceTree = "<group>";
+		};
+		B32AACC41ED9F84400BA88E1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B32AACC61ED9F8C000BA88E1 /* GeneralViewControllers */,
+				B32AACC71ED9F8E600BA88E1 /* HeirViewControllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B32AACC51ED9F85900BA88E1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B32AACAD1ED9F60800BA88E1 /* LaunchScreen.storyboard */,
+				B32AACA51ED9F60800BA88E1 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B32AACC61ED9F8C000BA88E1 /* GeneralViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B32AACA31ED9F60800BA88E1 /* GeneralViewController.swift */,
+			);
+			name = GeneralViewControllers;
+			sourceTree = "<group>";
+		};
+		B32AACC71ED9F8E600BA88E1 /* HeirViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B32AACCD1ED9FE1900BA88E1 /* SearchView */,
+				B32AACD01EDA0C4300BA88E1 /* DetailViewController */,
+			);
+			name = HeirViewControllers;
+			sourceTree = "<group>";
+		};
+		B32AACCD1ED9FE1900BA88E1 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */,
+				B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */,
+			);
+			name = SearchView;
+			sourceTree = "<group>";
+		};
+		B32AACD01EDA0C4300BA88E1 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */,
+			);
+			name = DetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32AACA41ED9F60800BA88E1 /* ViewController.swift in Sources */,
+				B32AACC91ED9F99300BA88E1 /* SearchViewController.swift in Sources */,
+				B32AACA41ED9F60800BA88E1 /* GeneralViewController.swift in Sources */,
+				B32AACCF1EDA03F300BA88E1 /* DetailViewController.swift in Sources */,
+				B32AACCC1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift in Sources */,
 				B32AACA21ED9F60800BA88E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E792YKQ3U4;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.dm.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E792YKQ3U4;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.dm.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

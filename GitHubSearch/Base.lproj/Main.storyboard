@@ -1,26 +1,121 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4wG-kK-6Bi">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="UbJ-Nx-XaS">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="4wG-kK-6Bi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="icz-0x-g6M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LHq-jv-IkI" kind="relationship" relationship="rootViewController" id="XF6-kP-cQ9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4eT-gu-Kqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1342" y="97"/>
+        </scene>
+        <!--Search for repositories-->
+        <scene sceneID="Xxp-21-clx">
+            <objects>
+                <viewController id="LHq-jv-IkI" customClass="SearchViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fPL-F7-LSX"/>
+                        <viewControllerLayoutGuide type="bottom" id="v1g-vI-mfu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3fB-3m-dC0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bah-dg-1aM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZMQ-eb-CCG">
+                                <rect key="frame" x="0.0" y="108" width="320" height="372"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepositoryCell" id="GIq-tm-wsP">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GIq-tm-wsP" id="yNm-Qb-rth">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LHq-jv-IkI" id="Q9p-Db-pFz"/>
+                                    <outlet property="delegate" destination="LHq-jv-IkI" id="GaA-5K-o8l"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bah-dg-1aM" firstAttribute="top" secondItem="fPL-F7-LSX" secondAttribute="bottom" id="3NR-jS-MD9"/>
+                            <constraint firstItem="ZMQ-eb-CCG" firstAttribute="top" secondItem="bah-dg-1aM" secondAttribute="bottom" id="571-Cz-Ddb"/>
+                            <constraint firstAttribute="trailing" secondItem="bah-dg-1aM" secondAttribute="trailing" id="FRR-cG-Qnv"/>
+                            <constraint firstAttribute="trailing" secondItem="ZMQ-eb-CCG" secondAttribute="trailing" id="TWD-xz-Pl1"/>
+                            <constraint firstItem="bah-dg-1aM" firstAttribute="leading" secondItem="3fB-3m-dC0" secondAttribute="leading" id="nt0-vk-PUL"/>
+                            <constraint firstItem="ZMQ-eb-CCG" firstAttribute="leading" secondItem="3fB-3m-dC0" secondAttribute="leading" id="rR1-s0-mxJ"/>
+                            <constraint firstItem="v1g-vI-mfu" firstAttribute="top" secondItem="ZMQ-eb-CCG" secondAttribute="bottom" id="xfv-7T-i46"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search for repositories" id="Inp-V6-wsn"/>
+                    <connections>
+                        <segue destination="DtZ-If-ChE" kind="show" identifier="DetailSegue" id="Rdr-Nc-QUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aox-U9-9pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-523" y="96"/>
+        </scene>
+        <!--Repository details-->
+        <scene sceneID="T5o-9S-gOc">
+            <objects>
+                <viewController id="DtZ-If-ChE" customClass="DetailViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QKh-ox-YfV"/>
+                        <viewControllerLayoutGuide type="bottom" id="7JZ-WC-5hk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Sp-U5-1WO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhY-ZX-vJA">
+                                <rect key="frame" x="24" y="72" width="272" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showRepositorySafariView:" destination="DtZ-If-ChE" eventType="touchUpInside" id="twm-Hi-4RY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZhY-ZX-vJA" firstAttribute="leading" secondItem="4Sp-U5-1WO" secondAttribute="leadingMargin" constant="8" id="7uv-4Y-m7y"/>
+                            <constraint firstItem="ZhY-ZX-vJA" firstAttribute="top" secondItem="QKh-ox-YfV" secondAttribute="bottom" constant="8" id="Ol5-B4-1Jh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZhY-ZX-vJA" secondAttribute="trailing" constant="8" id="gsS-WN-2wq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Repository details" id="ynG-YW-sGt"/>
+                    <connections>
+                        <outlet property="urlButton" destination="ZhY-ZX-vJA" id="Sk7-Tw-HlF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGy-bi-1t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="96"/>
         </scene>
     </scenes>
 </document>
