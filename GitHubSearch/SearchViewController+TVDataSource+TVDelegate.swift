@@ -33,6 +33,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedRepository = indexPath.row
         performSegue(withIdentifier: SearchViewController.segueIdentifier, sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
