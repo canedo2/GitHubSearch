@@ -13,12 +13,28 @@ class DetailViewController: GeneralViewController {
     
     var repository:Repository?
     
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var starLabel: UILabel!
+    @IBOutlet weak var watchersLabel: UILabel!
+    @IBOutlet weak var forksLabel: UILabel!
+
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var urlButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = repository?.name
         urlButton.setTitle(repository!.url.absoluteString, for: UIControlState.normal)
+        
+        userLabel.text = "Created by: \(repository!.user)"
+        dateLabel.text = "Created at: \(repository!.date)"
+        starLabel.text = "Stars: \(repository!.stars)"
+        watchersLabel.text = "Watchers: \(repository!.watchers)"
+        forksLabel.text = "Forks: \(repository!.forks)"
+        descriptionTextView.text = "Description: \(repository!.description)"
+        
     }
 
     override func didReceiveMemoryWarning() {

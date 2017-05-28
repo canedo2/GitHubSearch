@@ -30,7 +30,7 @@ class Model:DataProcessProtocol,JsonParseStorageProtocol{
     
     //JsonParseStorageProtocol - JsonParseService
     func processJsonParseDictionary(result:[String:AnyObject]) {
-        
+            items.removeAll()
         for item in result["items"] as! [[String:AnyObject]]{
             let repository = createRepository(dictionary: item)
             items.append(repository)

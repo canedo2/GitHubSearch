@@ -12,7 +12,6 @@
 		B32AACA71ED9F60800BA88E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32AACA51ED9F60800BA88E1 /* Main.storyboard */; };
 		B32AACAC1ED9F60800BA88E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32AACAB1ED9F60800BA88E1 /* Assets.xcassets */; };
 		B32AACAF1ED9F60800BA88E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32AACAD1ED9F60800BA88E1 /* LaunchScreen.storyboard */; };
-		B32AACBA1ED9F60800BA88E1 /* GitHubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACB91ED9F60800BA88E1 /* GitHubSearchTests.swift */; };
 		B32AACC91ED9F99300BA88E1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */; };
 		B32AACCC1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */; };
 		B32AACCF1EDA03F300BA88E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */; };
@@ -46,8 +45,6 @@
 		B32AACAE1ED9F60800BA88E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32AACB01ED9F60800BA88E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B32AACB51ED9F60800BA88E1 /* GitHubSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B32AACB91ED9F60800BA88E1 /* GitHubSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchTests.swift; sourceTree = "<group>"; };
-		B32AACBB1ED9F60800BA88E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchViewController+TVDataSource+TVDelegate.swift"; sourceTree = "<group>"; };
 		B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				B32AACA01ED9F60800BA88E1 /* GitHubSearch */,
-				B32AACB81ED9F60800BA88E1 /* GitHubSearchTests */,
 				B32AAC9F1ED9F60800BA88E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,15 +106,6 @@
 				B32AACB01ED9F60800BA88E1 /* Info.plist */,
 			);
 			path = GitHubSearch;
-			sourceTree = "<group>";
-		};
-		B32AACB81ED9F60800BA88E1 /* GitHubSearchTests */ = {
-			isa = PBXGroup;
-			children = (
-				B32AACB91ED9F60800BA88E1 /* GitHubSearchTests.swift */,
-				B32AACBB1ED9F60800BA88E1 /* Info.plist */,
-			);
-			path = GitHubSearchTests;
 			sourceTree = "<group>";
 		};
 		B32AACC41ED9F84400BA88E1 /* Controllers */ = {
@@ -338,7 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32AACBA1ED9F60800BA88E1 /* GitHubSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
