@@ -62,7 +62,9 @@ class Model:DataProcessProtocol,JsonParseStorageProtocol{
         
         let description = dictionary["description"] as? String ?? "No description available"
         
-        let repository = Repository(name: name, user: user, url: url, date: date!, stars: stars, watchers: watchers, forks: forks, description: description)
+        let userImageUrl =  dictionary["owner"]?["avatar_url"] as! String
+        
+        let repository = Repository(name: name, user: user, url: url, date: date!, stars: stars, watchers: watchers, forks: forks, description: description, userImageUrl: userImageUrl)
         
         return repository
     }

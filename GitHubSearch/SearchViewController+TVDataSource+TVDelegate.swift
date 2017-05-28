@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
     static let reuseCellId = "RepositoryCell"
@@ -15,9 +16,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchViewController.reuseCellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SearchViewController.reuseCellId, for: indexPath) as! RepositoryCell
         let item = self.model.items[indexPath.row]
-        cell.textLabel?.text = ("\(item.user)/\(item.name)")
+        cell.titleLabel.text = "\(item.user)/\(item.name)"
+        cell.overviewLabel.text = "\(item.description)"
+        cell.userImageView.sd_setImage(with: URL(string:item.userImageUrl)!, placeholderImage: UIImage(named: "github-image"))
+        print(item.userImageUrl)
         return cell;
     
     }
@@ -36,3 +40,5 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         destinationController.repository = model.items[selectedRepository]
     }
 }
+
+
