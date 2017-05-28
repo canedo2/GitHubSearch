@@ -21,7 +21,14 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         cell.titleLabel.text = "\(item.user)/\(item.name)"
         cell.overviewLabel.text = "\(item.description)"
         cell.userImageView.sd_setImage(with: URL(string:item.userImageUrl)!, placeholderImage: UIImage(named: "github-image"))
-        print(item.userImageUrl)
+        cell.item = item
+        
+        cell.contentView.backgroundColor = UIColor.white
+        //TODO: Use CoreData
+        if( UserDefaults.standard.bool(forKey: "\(item.name)+\(item.user)") ){
+            cell.contentView.backgroundColor = UIColor.blue
+        }
+        
         return cell;
     
     }

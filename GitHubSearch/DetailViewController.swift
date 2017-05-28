@@ -43,11 +43,6 @@ class DetailViewController: GeneralViewController {
         descriptionTextView.text = "Description: \(repository!.description)"
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func showRepositorySafariView(_ sender: Any) {
         

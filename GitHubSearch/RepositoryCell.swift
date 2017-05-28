@@ -14,4 +14,18 @@ class RepositoryCell: UITableViewCell {
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     
+    weak var item: Repository?
+    
+    @IBAction func favoriteButton(_ sender: UIButton) {
+        //TODO: Use CoreData
+        if( UserDefaults.standard.bool(forKey: "\(item!.name)+\(item!.user)") ){
+            self.contentView.backgroundColor = UIColor.white
+            UserDefaults.standard.set(false, forKey: "\(item!.name)+\(item!.user)")
+        }
+        else{
+            self.contentView.backgroundColor = UIColor.blue
+            UserDefaults.standard.set(true, forKey: "\(item!.name)+\(item!.user)")
+        }
+    }
+    
 }
