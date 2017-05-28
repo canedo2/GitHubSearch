@@ -12,25 +12,28 @@ import UIKit
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
     static let reuseCellId = "RepositoryCell"
     static let segueIdentifier = "DetailSegue"
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchViewController.reuseCellId, for: indexPath);
-        cell.textLabel?.text = ("Number \(arc4random_uniform(150))")
+        let cell = tableView.dequeueReusableCell(withIdentifier: SearchViewController.reuseCellId, for: indexPath)
+        let item = self.model.items[indexPath.row]
+        cell.textLabel?.text = ("\(item.user)/\(item.name)")
         return cell;
     
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 40;
+        return self.model.items.count;
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedRepository = indexPath.row
         performSegue(withIdentifier: SearchViewController.segueIdentifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationController = segue.destination as! DetailViewController
-        destinationController.repositoryURL = "https://www.github.com/canedo2"
+        destinationController.repository = model.items[selectedRepository]
     }
 
 }

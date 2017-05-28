@@ -16,6 +16,15 @@
 		B32AACC91ED9F99300BA88E1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */; };
 		B32AACCC1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */; };
 		B32AACCF1EDA03F300BA88E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */; };
+		B385AFD01EDAC57900644774 /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFCF1EDAC57900644774 /* ApiServiceProtocol.swift */; };
+		B385AFD51EDAC62500644774 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFD41EDAC62500644774 /* ApiService.swift */; };
+		B385AFD81EDAC66500644774 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFD71EDAC66500644774 /* Repository.swift */; };
+		B385AFDA1EDACC5800644774 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFD91EDACC5800644774 /* Model.swift */; };
+		B385AFDC1EDAD28700644774 /* SearchViewController + UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFDB1EDAD28700644774 /* SearchViewController + UISearchBarDelegate.swift */; };
+		B385AFDE1EDAE05E00644774 /* DataProcessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFDD1EDAE05E00644774 /* DataProcessProtocol.swift */; };
+		B385AFE21EDAE56000644774 /* JsonParseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFE11EDAE56000644774 /* JsonParseServiceProtocol.swift */; };
+		B385AFE41EDAE5AB00644774 /* JsonParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFE31EDAE5AB00644774 /* JsonParseService.swift */; };
+		B385AFE61EDAEA4D00644774 /* JsonParseStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385AFE51EDAEA4D00644774 /* JsonParseStorageProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,15 @@
 		B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchViewController+TVDataSource+TVDelegate.swift"; sourceTree = "<group>"; };
 		B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B385AFCF1EDAC57900644774 /* ApiServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocol.swift; sourceTree = "<group>"; };
+		B385AFD41EDAC62500644774 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		B385AFD71EDAC66500644774 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		B385AFD91EDACC5800644774 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B385AFDB1EDAD28700644774 /* SearchViewController + UISearchBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchViewController + UISearchBarDelegate.swift"; sourceTree = "<group>"; };
+		B385AFDD1EDAE05E00644774 /* DataProcessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProcessProtocol.swift; sourceTree = "<group>"; };
+		B385AFE11EDAE56000644774 /* JsonParseServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParseServiceProtocol.swift; sourceTree = "<group>"; };
+		B385AFE31EDAE5AB00644774 /* JsonParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParseService.swift; sourceTree = "<group>"; };
+		B385AFE51EDAEA4D00644774 /* JsonParseStorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParseStorageProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				B32AACA11ED9F60800BA88E1 /* AppDelegate.swift */,
+				B385AFD61EDAC63C00644774 /* Models */,
 				B32AACC41ED9F84400BA88E1 /* Controllers */,
 				B32AACC51ED9F85900BA88E1 /* Storyboards */,
+				B385AFD11EDAC58E00644774 /* Services */,
 				B32AACAB1ED9F60800BA88E1 /* Assets.xcassets */,
 				B32AACB01ED9F60800BA88E1 /* Info.plist */,
 			);
@@ -141,6 +161,7 @@
 			children = (
 				B32AACC81ED9F99300BA88E1 /* SearchViewController.swift */,
 				B32AACCB1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift */,
+				B385AFDB1EDAD28700644774 /* SearchViewController + UISearchBarDelegate.swift */,
 			);
 			name = SearchView;
 			sourceTree = "<group>";
@@ -151,6 +172,44 @@
 				B32AACCE1EDA03F300BA88E1 /* DetailViewController.swift */,
 			);
 			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		B385AFD11EDAC58E00644774 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B385AFD21EDAC59C00644774 /* ServiceProtocols */,
+				B385AFD31EDAC5A500644774 /* ImplementedServices */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B385AFD21EDAC59C00644774 /* ServiceProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				B385AFCF1EDAC57900644774 /* ApiServiceProtocol.swift */,
+				B385AFDD1EDAE05E00644774 /* DataProcessProtocol.swift */,
+				B385AFE11EDAE56000644774 /* JsonParseServiceProtocol.swift */,
+				B385AFE51EDAEA4D00644774 /* JsonParseStorageProtocol.swift */,
+			);
+			name = ServiceProtocols;
+			sourceTree = "<group>";
+		};
+		B385AFD31EDAC5A500644774 /* ImplementedServices */ = {
+			isa = PBXGroup;
+			children = (
+				B385AFD41EDAC62500644774 /* ApiService.swift */,
+				B385AFE31EDAE5AB00644774 /* JsonParseService.swift */,
+			);
+			name = ImplementedServices;
+			sourceTree = "<group>";
+		};
+		B385AFD61EDAC63C00644774 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B385AFD71EDAC66500644774 /* Repository.swift */,
+				B385AFD91EDACC5800644774 /* Model.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,11 +317,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B385AFDA1EDACC5800644774 /* Model.swift in Sources */,
 				B32AACC91ED9F99300BA88E1 /* SearchViewController.swift in Sources */,
 				B32AACA41ED9F60800BA88E1 /* GeneralViewController.swift in Sources */,
+				B385AFD01EDAC57900644774 /* ApiServiceProtocol.swift in Sources */,
+				B385AFD81EDAC66500644774 /* Repository.swift in Sources */,
+				B385AFE21EDAE56000644774 /* JsonParseServiceProtocol.swift in Sources */,
+				B385AFDC1EDAD28700644774 /* SearchViewController + UISearchBarDelegate.swift in Sources */,
+				B385AFE61EDAEA4D00644774 /* JsonParseStorageProtocol.swift in Sources */,
 				B32AACCF1EDA03F300BA88E1 /* DetailViewController.swift in Sources */,
 				B32AACCC1ED9FDBF00BA88E1 /* SearchViewController+TVDataSource+TVDelegate.swift in Sources */,
+				B385AFD51EDAC62500644774 /* ApiService.swift in Sources */,
 				B32AACA21ED9F60800BA88E1 /* AppDelegate.swift in Sources */,
+				B385AFE41EDAE5AB00644774 /* JsonParseService.swift in Sources */,
+				B385AFDE1EDAE05E00644774 /* DataProcessProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +544,7 @@
 				B32AACC01ED9F60800BA88E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B32AACC11ED9F60800BA88E1 /* Build configuration list for PBXNativeTarget "GitHubSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +553,7 @@
 				B32AACC31ED9F60800BA88E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

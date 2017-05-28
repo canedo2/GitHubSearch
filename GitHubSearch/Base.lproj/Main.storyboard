@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,6 +40,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bah-dg-1aM">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LHq-jv-IkI" id="GKS-Pj-qTU"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZMQ-eb-CCG">
                                 <rect key="frame" x="0.0" y="108" width="320" height="372"/>
@@ -74,6 +76,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search for repositories" id="Inp-V6-wsn"/>
                     <connections>
+                        <outlet property="tableView" destination="ZMQ-eb-CCG" id="yUb-Cy-LBB"/>
                         <segue destination="DtZ-If-ChE" kind="show" identifier="DetailSegue" id="Rdr-Nc-QUR"/>
                     </connections>
                 </viewController>

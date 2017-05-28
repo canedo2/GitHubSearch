@@ -11,14 +11,14 @@ import SafariServices
 
 class DetailViewController: GeneralViewController {
     
-    var repositoryURL:String?
+    var repository:Repository?
     
     @IBOutlet weak var urlButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        urlButton.setTitle(repositoryURL, for: UIControlState.normal)
+        urlButton.setTitle(repository!.url.absoluteString, for: UIControlState.normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,17 +28,7 @@ class DetailViewController: GeneralViewController {
     
     @IBAction func showRepositorySafariView(_ sender: Any) {
         
-        guard let repoUrlString = repositoryURL else{
-            print("Critical error: DetailViewController has no url")
-            return;
-        }
-        
-        guard let url = URL(string:repoUrlString) else{
-            print("Critical error: DetailViewController was unable to create an url")
-            return;
-        }
-        
-        let sfViewController = SFSafariViewController(url: url)
+        let sfViewController = SFSafariViewController(url: repository!.url)
         present(sfViewController, animated: true, completion: nil)
     }
 }

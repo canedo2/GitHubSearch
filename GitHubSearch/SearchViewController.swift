@@ -10,8 +10,18 @@ import UIKit
 
 class SearchViewController: GeneralViewController 
 {
-
+    let model:Model=Model(apiService: ApiService(),jsonParseService:JsonParseService())
+    var selectedRepository:Int = -1
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.modelHasChangedNotificationMethod), name: NSNotification.Name.init(rawValue: "ModelHasChanged"), object: nil)
+    }
+    
+    func modelHasChangedNotificationMethod(){
+        tableView.reloadData()
     }
 }
