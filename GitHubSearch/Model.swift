@@ -23,12 +23,12 @@ class Model:DataProcessProtocol,JsonParseStorageProtocol{
         apiService.performRequest(searchString: searchString, dataProcessor: self)
     }
     
-    //DataProcessProtocol - ApiService
+    //DataProcessProtocol - Called by ApiService
     func process(data: Data) {
         jsonParseService.asyncParseToCocoaDictionary(jsonData: data, storage: self)
     }
     
-    //JsonParseStorageProtocol - JsonParseService
+    //JsonParseStorageProtocol - Called by JsonParseService
     func processJsonParseDictionary(result:[String:AnyObject]) {
             items.removeAll()
         for item in result["items"] as! [[String:AnyObject]]{

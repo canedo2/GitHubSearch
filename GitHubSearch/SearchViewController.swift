@@ -18,6 +18,7 @@ class SearchViewController: GeneralViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Model will send to notify changes
         NotificationCenter.default.addObserver(self, selector: #selector(self.modelHasChangedNotificationMethod), name: NSNotification.Name.init(rawValue: "ModelHasChanged"), object: nil)
     }
     

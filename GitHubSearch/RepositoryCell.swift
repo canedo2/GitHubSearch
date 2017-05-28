@@ -22,6 +22,7 @@ class RepositoryCell: UITableViewCell {
             self.contentView.backgroundColor = UIColor.white
             UserDefaults.standard.set(false, forKey: "\(item!.name)+\(item!.user)")
         }
+            
         else{
             self.contentView.backgroundColor = UIColor.blue
             UserDefaults.standard.set(true, forKey: "\(item!.name)+\(item!.user)")

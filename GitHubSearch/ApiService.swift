@@ -13,7 +13,6 @@ class ApiService: ApiServiceProtocol {
     
     
     func performRequest(searchString:String, dataProcessor:DataProcessProtocol){
-        
         let url = URL(string: "\(baseUrlString)\(searchString)\(optionsString)")
         
         guard let dataTaskUrl = url else {
@@ -23,11 +22,9 @@ class ApiService: ApiServiceProtocol {
         let dataTask = createSearchForRepositoriesDataTask(url: dataTaskUrl,dataProcessor: dataProcessor)
         
         dataTask.resume()
-        
     }
     
     func createSearchForRepositoriesDataTask(url: URL, dataProcessor:DataProcessProtocol) -> URLSessionDataTask{
-        
         let session = URLSession(configuration: .default)
         let urlRequest = URLRequest(url: url)
         
@@ -45,7 +42,6 @@ class ApiService: ApiServiceProtocol {
                 dataProcessor.process(data:responseData)
             }
         }
-        
         return dataTask;
     }
     

@@ -10,16 +10,17 @@ import Foundation
 import UIKit
 
 extension SearchViewController: UISearchBarDelegate{
-    func dismissKeyboard(){
-        self.view.endEditing(true)
-    }
+    
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
         guard let searchString = searchBar.text else{
             print("Empty searchbar")
             return
         }
         model.fillWithSearch(searchString: searchString)
         dismissKeyboard()
+    }
+    
+    func dismissKeyboard(){
+        self.view.endEditing(true)
     }
 }

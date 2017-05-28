@@ -12,7 +12,8 @@ class GeneralViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Setup all app controllers
+        self.view.backgroundColor = UIColor.cyan
     }
 }
 
