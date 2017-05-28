@@ -26,10 +26,17 @@ class DetailViewController: GeneralViewController {
         super.viewDidLoad()
         
         navigationItem.title = repository?.name
+        
         urlButton.setTitle(repository!.url.absoluteString, for: UIControlState.normal)
+        urlButton.titleLabel?.textAlignment = NSTextAlignment.left
+        urlButton.titleLabel?.lineBreakMode = .byTruncatingTail
         
         userLabel.text = "Created by: \(repository!.user)"
-        dateLabel.text = "Created at: \(repository!.date)"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateLabel.text = "Created at: \(dateFormatter.string(from:repository!.date))"
+        
         starLabel.text = "Stars: \(repository!.stars)"
         watchersLabel.text = "Watchers: \(repository!.watchers)"
         forksLabel.text = "Forks: \(repository!.forks)"

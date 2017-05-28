@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1342" y="97"/>
         </scene>
-        <!--Search for repositories-->
+        <!--Search-->
         <scene sceneID="Xxp-21-clx">
             <objects>
                 <viewController id="LHq-jv-IkI" customClass="SearchViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                             <constraint firstItem="v1g-vI-mfu" firstAttribute="top" secondItem="ZMQ-eb-CCG" secondAttribute="bottom" id="xfv-7T-i46"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search for repositories" id="Inp-V6-wsn"/>
+                    <navigationItem key="navigationItem" title="Search" id="Inp-V6-wsn"/>
                     <connections>
                         <outlet property="tableView" destination="ZMQ-eb-CCG" id="yUb-Cy-LBB"/>
                         <segue destination="DtZ-If-ChE" kind="show" identifier="DetailSegue" id="Rdr-Nc-QUR"/>
@@ -161,7 +161,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sp1-Lu-Enq">
                                 <rect key="frame" x="18" y="324" width="284" height="148"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>

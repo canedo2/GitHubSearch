@@ -35,5 +35,4 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         let destinationController = segue.destination as! DetailViewController
         destinationController.repository = model.items[selectedRepository]
     }
-
 }

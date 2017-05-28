@@ -44,7 +44,6 @@ class Model:DataProcessProtocol,JsonParseStorageProtocol{
         let name = dictionary["name"] as! String
         
         let user = dictionary["owner"]?["login"] as! String
-        print("REPOSITORY: \(name) - \(user)")
         
         let urlString = dictionary["html_url"] as! String
         let url = URL(string: urlString)!
