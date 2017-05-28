@@ -17,8 +17,9 @@ class Repository{
     let watchers:Int
     let forks:Int
     let description:String
+    let userImageUrl:String
     
-    init(name: String ,user: String, url: URL, date:Date, stars:Int, watchers:Int, forks:Int, description:String){
+    init(name: String ,user: String, url: URL, date:Date, stars:Int, watchers:Int, forks:Int, description:String, userImageUrl: String){
         self.name = name
         self.user = user
         self.url = url
@@ -27,5 +28,6 @@ class Repository{
         self.watchers = watchers
         self.forks = forks
         self.description = description
+        self.userImageUrl = userImageUrl
     }
 }
